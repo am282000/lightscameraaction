@@ -23,7 +23,6 @@ const CustomPagination = ({ setPage, numOfPages = 10 }) => {
 			}}>
 			<ThemeProvider theme={darkTheme}>
 				<Pagination
-					// variant="outlined"
 					// shape="rounded"
 					hideNextButton
 					hidePrevButton
