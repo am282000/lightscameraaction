@@ -1,4 +1,4 @@
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import './App.css';
 import Header from './components/Header/Header';
 import SimpleBottomNavigation from './components/MainNav';
@@ -19,6 +19,7 @@ function App() {
 						<Route path="/movies" component={Movies} />
 						<Route path="/series" component={Series} />
 						<Route path="/search" component={Search} />
+						<Redirect to="/" />
 					</Switch>
 				</Container>
 			</div>

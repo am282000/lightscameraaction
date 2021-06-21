@@ -59,14 +59,16 @@ const Genres = ({
 			{/* Show an Array of all Genre */}
 			{genres &&
 				genres.map((genre) => (
-					<Chip
-						label={genre.name}
-						style={{ margin: 2 }}
-						clickable
-						size="small"
-						key={genre.id}
-						onClick={() => handleAdd(genre)}
-					/>
+					<b>
+						<Chip
+							label={genre.name}
+							style={{ margin: 2 }}
+							clickable
+							size="small"
+							key={genre.id}
+							onClick={() => handleAdd(genre)}
+						/>
+					</b>
 				))}
 		</div>
 	);
