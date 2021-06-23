@@ -44,7 +44,7 @@ const Carousel = ({ id, media_type }) => {
 	// console.log(credits);
 	return (
 		<AliceCarousel
-			autoPlay={credits.length > 2}
+			autoPlay
 			responsive={responsive}
 			disableDotsControls
 			disableButtonsControls
