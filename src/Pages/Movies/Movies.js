@@ -4,6 +4,7 @@ import Genres from '../../components/Genres';
 import CustomPagination from '../../components/Pagination/CustomPagination';
 import SingleContent from '../../components/SingleContent/SingleContent';
 import useGenre from '../../hooks/useGenre';
+import { Helmet } from 'react-helmet';
 
 const Movies = () => {
 	const [genres, setGenres] = useState([]);
@@ -31,6 +32,14 @@ const Movies = () => {
 	return (
 		<div>
 			<span className="pageTitle">Discover Movies</span>
+			<Helmet>
+				<title>Explore Movies</title>
+				<meta name="description" content="Explore new movies with genres" />
+				<meta
+					name="keywords"
+					content="Movies, TV Series, Search Movies, Trending, Lights Camera Action"
+				/>
+			</Helmet>
 			<Genres
 				type="movie"
 				selectedGenres={selectedGenres}

@@ -13,6 +13,7 @@ import { Button } from '@material-ui/core';
 import YouTubeIcon from '@material-ui/icons/YouTube';
 import Carousel from '../Carousel/Carousel';
 import './ContentModal.css';
+import { Helmet } from 'react-helmet';
 
 const useStyles = makeStyles((theme) => ({
 	modal: {
@@ -90,6 +91,10 @@ export default function ContentModal({ children, media_type, id }) {
 				<Fade in={open}>
 					{content && (
 						<div className={classes.paper}>
+							<Helmet>
+								<title>{content.name || content.title}</title>
+								<meta name="description" content={content.overview} />
+							</Helmet>
 							<div className="ContentModal">
 								<img
 									src={

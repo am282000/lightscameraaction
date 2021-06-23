@@ -11,6 +11,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import axios from 'axios';
 import CustomPagination from '../../components/Pagination/CustomPagination';
 import SingleContent from '../../components/SingleContent/SingleContent';
+import { Helmet } from 'react-helmet';
 
 const Search = () => {
 	const [type, setType] = useState(0);
@@ -45,12 +46,23 @@ const Search = () => {
 
 	useEffect(() => {
 		window.scroll(0, 0);
-		fetchSearch();
+		// fetchSearch();
 		// eslint-disable-next-line
 	}, [type, page]);
 
 	return (
 		<div>
+			<Helmet>
+				<title>Search Movies & TV Series</title>
+				<meta
+					name="description"
+					content="Search for your favorite Movies and TV Series"
+				/>
+				<meta
+					name="keywords"
+					content="Movies, TV Series, Search Movies, Trending, Lights Camera Action"
+				/>
+			</Helmet>
 			<ThemeProvider theme={darkTheme}>
 				<div className="search" style={{ display: 'flex', margin: '15px 0' }}>
 					<TextField

@@ -26,7 +26,6 @@ const Carousel = ({ id, media_type }) => {
 		0: { items: 3 },
 		512: { items: 4 },
 		666: { items: 5 },
-		1023: { items: 5 },
 		1241: { items: 6 },
 		1361: { items: 7 }
 	};
@@ -42,10 +41,10 @@ const Carousel = ({ id, media_type }) => {
 		fetchCredits();
 		// eslint-disable-next-line
 	}, []);
-
+	// console.log(credits);
 	return (
 		<AliceCarousel
-			autoPlay
+			autoPlay={credits.length > 2}
 			responsive={responsive}
 			disableDotsControls
 			disableButtonsControls
